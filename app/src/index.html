@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Supply Chain DAPP</title>
+  </head>
+  <style>
+    input {
+      display: block;
+      margin-bottom: 12px;
+    }
+  </style>
+  <body>
+
+    <h1>Product Details</h1>
+
+    <label for="sku">SKU:</label>
+    <input type="number" id="sku" disabled = "disabled"/>
+
+    <label for="ownerID">Owner ID:</label>
+    <input type="text" id="ownerID" disabled = "disabled"/>
+
+    <label for="originFarmerID">Origin FarmerID:</label>
+    <input type="text" id="originFarmerID" disabled = "disabled"/>
+
+    <label for="distributorID">Distributor ID:</label>
+    <input type="text" id="distributorID" disabled = "disabled"/>
+
+    <label for="retailerID">Retailer ID:</label>
+    <input type="text" id="retailerID" disabled = "disabled"/>
+
+    <label for="consumerID">Consumer ID:</label>
+    <input type="text" id="consumerID" disabled = "disabled"/>
+
+    <label for="itemState">Item State:</label>
+    <input type="number" id="itemState" disabled = "disabled"/>
+
+    <label for="upc">UPC:</label>
+    <input type="number" id="upc" placeholder="1" />
+
+    <label for="originFarmName">Farm Name:</label>
+    <input
+      type="text"
+      id="originFarmName"
+      placeholder="farm name"
+    />
+
+    <label for="originFarmInformation">Farm Information:</label>
+    <input
+      type="text"
+      id="originFarmInformation"
+      placeholder="farm info"
+    />
+
+    <label for="originFarmLongitude">Farm Longitude:</label>
+    <input
+      type="text"
+      id="originFarmLongitude"
+      placeholder="Farm Longitude"
+    />
+    <label for="originFarmLatitude">Farm Latitude:</label>
+    <input
+      type="text"
+      id="originFarmLatitude"
+      placeholder="Farm Latitude"
+    />
+
+    <label for="productNotes">Product Notes:</label>
+    <input
+      type="text"
+      id="productNotes"
+      placeholder="Notes"
+    />
+
+    <button onclick="App.harvestItem()">Harvest Item</button>
+    <p></p>
+    <label for="productID">ProductID:</label>
+    <input
+      type="text"
+      id="productID"
+      placeholder="1-1"
+    />
+
+    <button onclick="App.processItem()">Process Item</button>
+    <button onclick="App.packItem()">Pack Item</button>
+
+    <p></p>
+    <label for="productPrice">ProductPrice:</label>
+    <input
+      type="number"
+      id="productPrice"
+      placeholder="1000 Wei"
+    />
+
+    <button onclick="App.sellItem()">Sell Item</button>
+    <button onclick="App.buyItem()">Buy Item</button>
+
+    <p></p>
+    <button onclick="App.shipItem()">Ship Item</button>
+    <button onclick="App.receiveItem()">Receive Item</button>
+    <button onclick="App.purchaseItem()">Purchase Item</button>
+
+    <p></p>
+    <button onclick="App.fetchItemBuffer()">Fetch Item Details</button>
+    <p></p>
+    <label for="account">Account:</label>
+    <input
+      type="string"
+      id="account"
+      placeholder="0x0000000000000000000000000000000000000000"
+    />
+    <button onclick="App.allRoles()">Get All Roles</button>
+
+    <p id="status"></p>
+
+    <script src="index.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+  </body>
+</html>
